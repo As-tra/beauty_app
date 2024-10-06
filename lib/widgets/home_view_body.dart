@@ -1,5 +1,6 @@
 import 'package:beauty_app/widgets/custom_app_bar.dart';
 import 'package:beauty_app/widgets/custom_background.dart';
+import 'package:beauty_app/widgets/custom_search_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -14,6 +15,9 @@ class HomeViewBody extends StatelessWidget {
           children: [
             SizedBox(height: 20),
             CustomAppBar(),
+            SizedBox(height: 20),
+            CustomSearchBar(),
+            // SizedBox(height: 40),
           ],
         ),
       ),
