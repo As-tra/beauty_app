@@ -30,6 +30,10 @@ class Assets {
   /// assets/images/person_icon.png
   static const String imagesPersonIcon = "assets/images/person_icon.png";
 
+  /// Assets for imagesProduct1
+  /// assets/images/product1.png
+  static const String imagesProduct1 = "assets/images/product1.png";
+
   /// Assets for imagesProfile
   /// assets/images/profile.jpg
   static const String imagesProfile = "assets/images/profile.jpg";
