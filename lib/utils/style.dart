@@ -58,4 +58,10 @@ abstract class Style {
     fontWeight: FontWeight.bold,
     color: kPrimary,
   );
+  static const TextStyle oleoScriptBold15 = TextStyle(
+    fontFamily: kOleoScript,
+    fontSize: 15,
+    fontWeight: FontWeight.bold,
+    color: kPrimary,
+  );
 }
