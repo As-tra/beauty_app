@@ -1,9 +1,11 @@
-import 'package:beauty_app/constants.dart';
+import 'package:beauty_app/utils/app_router.dart';
 import 'package:beauty_app/utils/assets.dart';
 import 'package:beauty_app/utils/style.dart';
+import 'package:beauty_app/widgets/custom_background.dart';
 import 'package:beauty_app/widgets/feel_youn_again_label.dart';
 import 'package:beauty_app/widgets/splash_button.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatelessWidget {
   const SplashViewBody({super.key});
@@ -12,7 +14,7 @@ class SplashViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        _buildBackground(),
+        const CustomBackground(),
         Positioned(
           left: 0,
           top: 230,
@@ -24,7 +26,7 @@ class SplashViewBody extends StatelessWidget {
           child: Image.asset(Assets.imagesRightStar),
         ),
         _setBackgroundImage(context),
-        _buildSplashContent(),
+        _buildSplashContent(context),
         Positioned(
           bottom: 0,
           right: 0,
@@ -40,7 +42,7 @@ class SplashViewBody extends StatelessWidget {
     );
   }
 
-  Padding _buildSplashContent() {
+  Padding _buildSplashContent(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
         horizontal: 32,
@@ -52,7 +54,9 @@ class SplashViewBody extends StatelessWidget {
           _buildText(),
           const SizedBox(height: 28),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              GoRouter.of(context).push(AppRouter.kHomeView);
+            },
             child: const SplashButton(),
           ),
         ],
@@ -79,14 +83,6 @@ class SplashViewBody extends StatelessWidget {
             image: AssetImage(Assets.imagesSplashBg2),
           ),
         ),
-      ),
-    );
-  }
-
-  Container _buildBackground() {
-    return Container(
-      decoration: const BoxDecoration(
-        gradient: kLinearGradient,
       ),
     );
   }
