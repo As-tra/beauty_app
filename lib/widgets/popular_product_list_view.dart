@@ -8,9 +8,14 @@ class PopularProductListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      physics: const BouncingScrollPhysics(),
+      itemCount: kPopularProducts.length,
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) {
-        return PopularProductItem(productModel: kProducts[0]);
+        return Padding(
+          padding: const EdgeInsets.only(right: 10.0),
+          child: PopularProductItem(productModel: kPopularProducts[index]),
+        );
       },
     );
   }

@@ -9,11 +9,28 @@ class PopularProductItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: _buildDecoration(),
-      child:  Stack(
+    return SizedBox(
+      width: 180,
+      child: Stack(
         children: [
-          PopularProductItemDesc(productModel: productModel),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              height: 180,
+              decoration: _buildDecoration(),
+            ),
+          ),
+          Positioned(
+            top: -15,
+            child: Image.asset(
+              productModel.image,
+              height: 180,
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: PopularProductItemDesc(productModel: productModel),
+          ),
         ],
       ),
     );
@@ -46,5 +63,3 @@ class PopularProductItem extends StatelessWidget {
     );
   }
 }
-
-

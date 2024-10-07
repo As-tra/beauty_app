@@ -17,17 +17,34 @@ class PopularProductItemDesc extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
       decoration: _buildDecoration(),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
           Row(
             children: [
-              Text(productModel.productName, style: Style.openSansSemiBold14),
+              Text(
+                productModel.productName,
+                style: Style.openSansSemiBold14.copyWith(
+                  color: kTertiary,
+                ),
+              ),
               const Spacer(),
-              Text("${productModel.price}\$", style: Style.openSansSemiBold16),
+              Text(
+                "${productModel.price}\$",
+                style: Style.openSansSemiBold16.copyWith(
+                  color: kTertiary,
+                ),
+              ),
             ],
           ),
+          const SizedBox(height: 5),
           Row(
             children: [
-              Text(productModel.category, style: Style.openSansRegular12),
+              Text(
+                productModel.category,
+                style: Style.openSansRegular12.copyWith(
+                  color: kTertiary,
+                ),
+              ),
               const Spacer(),
               const Icon(
                 Icons.add_circle_outline,
@@ -41,12 +58,9 @@ class PopularProductItemDesc extends StatelessWidget {
   }
 
   BoxDecoration _buildDecoration() {
-    return const BoxDecoration(
+    return BoxDecoration(
       color: kPrimary,
-      borderRadius: BorderRadius.only(
-        topLeft: Radius.circular(12),
-        topRight: Radius.circular(12),
-      ),
+      borderRadius: BorderRadius.circular(12),
     );
   }
 }

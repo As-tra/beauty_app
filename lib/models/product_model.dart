@@ -5,6 +5,7 @@ class ProductModel {
   final String image;
   final double price;
   final double rate;
+  final String description;
 
   ProductModel({
     required this.productName,
@@ -13,5 +14,6 @@ class ProductModel {
     required this.price,
     required this.rate,
     required this.image,
+    required this.description,
   });
 }

@@ -1,10 +1,7 @@
-import 'package:beauty_app/constants.dart';
-import 'package:beauty_app/models/product_model.dart';
 import 'package:beauty_app/utils/style.dart';
 import 'package:beauty_app/widgets/custom_app_bar.dart';
 import 'package:beauty_app/widgets/custom_background.dart';
 import 'package:beauty_app/widgets/custom_search_bar.dart';
-import 'package:beauty_app/widgets/popular_product_item.dart';
 import 'package:beauty_app/widgets/popular_product_list_view.dart';
 import 'package:flutter/material.dart';
 
@@ -34,8 +31,9 @@ class HomeViewBody extends StatelessWidget {
                       )
                     ],
                   ),
+                  SizedBox(height: 24),
                   SizedBox(
-                    height: 300,
+                    height: 240,
                     child: PopularProductListView(),
                   ),
                 ],
