@@ -14,6 +14,12 @@ abstract class Style {
     fontWeight: FontWeight.bold,
     color: kPrimary,
   );
+  static const TextStyle openSansBold20 = TextStyle(
+    fontFamily: kOpenSans,
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: kTertiary,
+  );
   static const TextStyle openSansBold14 = TextStyle(
     fontFamily: kOpenSans,
     fontSize: 14,
@@ -53,6 +59,12 @@ abstract class Style {
     fontSize: 24,
     color: kPrimary,
   );
+  static const TextStyle oleoScriptBold24 = TextStyle(
+    fontFamily: kOleoScript,
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+    color: kPrimary,
+  );
   static const TextStyle oleoScriptRegular12 = TextStyle(
     fontFamily: kOleoScript,
     fontSize: 12,
@@ -61,6 +73,12 @@ abstract class Style {
   static const TextStyle oleoScriptBold18 = TextStyle(
     fontFamily: kOleoScript,
     fontSize: 18,
+    fontWeight: FontWeight.bold,
+    color: kPrimary,
+  );
+  static const TextStyle oleoScriptBold20 = TextStyle(
+    fontFamily: kOleoScript,
+    fontSize: 20,
     fontWeight: FontWeight.bold,
     color: kPrimary,
   );
