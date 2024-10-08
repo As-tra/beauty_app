@@ -21,7 +21,7 @@ class PopularProductListView extends StatelessWidget {
                 GoRouter.of(context).push(AppRouter.kProductView,
                     extra: kPopularProducts[index]);
               },
-              child: PopularProductItem(productModel: kPopularProducts[index])),
+              child: Hero(tag:kPopularProducts[index].productName ,child: PopularProductItem(productModel: kPopularProducts[index]))),
         );
       },
     );

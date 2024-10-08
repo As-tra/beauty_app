@@ -3,6 +3,7 @@ import 'package:beauty_app/widgets/custom_background.dart';
 import 'package:beauty_app/widgets/product_custom_cover.dart';
 import 'package:beauty_app/widgets/product_view_app_bar.dart';
 import 'package:beauty_app/widgets/product_view_description.dart';
+import 'package:beauty_app/widgets/product_volumes_options.dart';
 import 'package:flutter/material.dart';
 
 class ProductViewBody extends StatelessWidget {
@@ -12,15 +13,13 @@ class ProductViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomBackground(
+      hPadding: 20,
       child: SafeArea(
         child: Column(
           children: [
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: ProductViewAppBar(),
-            ),
-            const SizedBox(height: 130),
-            // const Spacer(),
+            const ProductViewAppBar(),
+            // const SizedBox(height: 120),
+            const Spacer(),
             Row(
               children: [
                 Expanded(
@@ -29,10 +28,15 @@ class ProductViewBody extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  child: ProductCustomCover(image: productModel.image),
+                  child: Hero(
+                    tag: productModel.productName,
+                    child: ProductCustomCover(image: productModel.image),
+                  ),
                 ),
               ],
-            )
+            ),
+            const Spacer(),
+            const ProductVolumesOptions(),
           ],
         ),
       ),

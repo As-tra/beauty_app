@@ -1,5 +1,7 @@
 import 'package:beauty_app/models/product_model.dart';
 import 'package:beauty_app/utils/style.dart';
+import 'package:beauty_app/widgets/product_description_counter.dart';
+import 'package:beauty_app/widgets/rating_bar.dart';
 import 'package:flutter/material.dart';
 
 class ProductViewDescription extends StatelessWidget {
@@ -32,6 +34,10 @@ class ProductViewDescription extends StatelessWidget {
           "${productModel.price}\$",
           style: Style.oleoScriptBold20,
         ),
+        const SizedBox(height: 16),
+        const ProductDescriptionCounter(),
+        const SizedBox(height: 8),
+        RatingBar(rating: productModel.rate),
       ],
     );
   }

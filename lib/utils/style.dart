@@ -26,6 +26,12 @@ abstract class Style {
     fontWeight: FontWeight.bold,
     color: kPrimary,
   );
+  static const TextStyle openSansBold15 = TextStyle(
+    fontFamily: kOpenSans,
+    fontSize: 15,
+    fontWeight: FontWeight.bold,
+    color: kPrimary,
+  );
   static const TextStyle openSansSemiBold14 = TextStyle(
     fontFamily: kOpenSans,
     fontSize: 14,

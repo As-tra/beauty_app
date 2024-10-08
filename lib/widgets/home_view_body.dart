@@ -14,7 +14,7 @@ class HomeViewBody extends StatelessWidget {
     return const CustomBackground(
       child: SafeArea(
         child: CustomScrollView(
-          physics:  BouncingScrollPhysics(),
+          physics: BouncingScrollPhysics(),
           slivers: [
             SliverToBoxAdapter(
               child: Padding(

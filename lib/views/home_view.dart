@@ -28,34 +28,37 @@ class _HomeViewState extends State<HomeView> {
   ];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: kPrimary,
-      body: views[currentIndex],
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        shape: const CircleBorder(),
+    return PopScope(
+      canPop: false,
+      child: Scaffold(
         backgroundColor: kPrimary,
-        child: Image.asset(
-          Assets.imagesCartIcon,
-          color: kTertiary,
+        body: views[currentIndex],
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButton: FloatingActionButton(
+          shape: const CircleBorder(),
+          backgroundColor: kPrimary,
+          child: Image.asset(
+            Assets.imagesCartIcon,
+            color: kTertiary,
+          ),
+          onPressed: () {},
         ),
-        onPressed: () {},
-      ),
-      bottomNavigationBar: AnimatedBottomNavigationBar.builder(
-        itemCount: iconList.length,
-        tabBuilder: (index, isActive) {
-          return Icon(
-            iconList[index],
-            color: isActive ? Colors.white : kTertiary,
-            size: isActive ? 28 : 24,
-          );
-        },
-        activeIndex: currentIndex,
-        backgroundColor: kPrimary,
-        gapLocation: GapLocation.center,
-        notchSmoothness: NotchSmoothness.verySmoothEdge,
-        onTap: (index) => setState(() => currentIndex = index),
-        //other params
+        bottomNavigationBar: AnimatedBottomNavigationBar.builder(
+          itemCount: iconList.length,
+          tabBuilder: (index, isActive) {
+            return Icon(
+              iconList[index],
+              color: isActive ? Colors.white : kTertiary,
+              size: isActive ? 28 : 24,
+            );
+          },
+          activeIndex: currentIndex,
+          backgroundColor: kPrimary,
+          gapLocation: GapLocation.center,
+          notchSmoothness: NotchSmoothness.verySmoothEdge,
+          onTap: (index) => setState(() => currentIndex = index),
+          //other params
+        ),
       ),
     );
   }
