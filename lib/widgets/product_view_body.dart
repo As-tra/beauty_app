@@ -1,5 +1,6 @@
 import 'package:beauty_app/models/product_model.dart';
 import 'package:beauty_app/widgets/custom_background.dart';
+import 'package:beauty_app/widgets/custom_product_swipe_button.dart';
 import 'package:beauty_app/widgets/product_custom_cover.dart';
 import 'package:beauty_app/widgets/product_view_app_bar.dart';
 import 'package:beauty_app/widgets/product_view_description.dart';
@@ -37,6 +38,8 @@ class ProductViewBody extends StatelessWidget {
             ),
             const Spacer(),
             const ProductVolumesOptions(),
+            const SizedBox(height: 42),
+            const CustomProductSwipeButton(),
           ],
         ),
       ),

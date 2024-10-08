@@ -15,6 +15,7 @@ class _ProductVolumesOptionsState extends State<ProductVolumesOptions> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: ProductVolumesOptions.volumes.asMap().entries.map(
         (e) {
           return InkWell(
