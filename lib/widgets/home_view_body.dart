@@ -1,6 +1,7 @@
 import 'package:beauty_app/utils/style.dart';
 import 'package:beauty_app/widgets/custom_app_bar.dart';
 import 'package:beauty_app/widgets/custom_background.dart';
+import 'package:beauty_app/widgets/custom_categories_tab_bar.dart';
 import 'package:beauty_app/widgets/custom_search_bar.dart';
 import 'package:beauty_app/widgets/popular_product_list_view.dart';
 import 'package:beauty_app/widgets/product_list_view.dart';
@@ -49,6 +50,10 @@ class HomeViewBody extends StatelessWidget {
                       child: PopularProductListView(),
                     ),
                     SizedBox(height: 20),
+                    SizedBox(
+                      height: 70,
+                      child: CustomCategoriesTabBar(),
+                    ),
                   ],
                 ),
               ),

@@ -11,9 +11,11 @@ class ProductListView extends StatelessWidget {
       sliver: SliverList.builder(
         itemCount: 10,
         itemBuilder: (context, index) {
-          return const Padding(
-            padding: EdgeInsets.only(bottom: 20),
-            child: ProductListViewItem(),
+          return  Padding(
+            padding: const EdgeInsets.only(bottom: 20),
+            child: ProductListViewItem(
+              isActive: index % 2 == 0,
+            ),
           );
         },
       ),
