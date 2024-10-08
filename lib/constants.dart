@@ -15,11 +15,21 @@ const kLinearGradient = LinearGradient(
 const kOleoScript = "OleoScript";
 const kOpenSans = "OpenSans";
 
+List<String> kCategories = [
+  "Cosmetics",
+  "Skin Care",
+  "Face Care",
+  "Nail Care",
+  "Lip Care",
+  "Hair Care",
+  "Fragrance"
+];
+
 List<ProductModel> kPopularProducts = [
   ProductModel(
     productName: "Aroma Cream",
     mark: "Aveeno",
-    category: "Skincare",
+    category: "Skin Care",
     price: 85,
     rate: 4,
     image: Assets.imagesProduct1,

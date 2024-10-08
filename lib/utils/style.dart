@@ -6,11 +6,17 @@ abstract class Style {
     fontFamily: kOpenSans,
     fontSize: 16,
     fontWeight: FontWeight.w600,
-    color: Colors.white,
+    color: kSecondary,
   );
   static const TextStyle openSansBold18 = TextStyle(
     fontFamily: kOpenSans,
     fontSize: 18,
+    fontWeight: FontWeight.bold,
+    color: kPrimary,
+  );
+  static const TextStyle openSansBold14 = TextStyle(
+    fontFamily: kOpenSans,
+    fontSize: 14,
     fontWeight: FontWeight.bold,
     color: kPrimary,
   );

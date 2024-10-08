@@ -26,6 +26,18 @@ class Assets {
   /// assets/images/left_star.png
   static const String imagesLeftStar = "assets/images/left_star.png";
 
+  /// Assets for imagesP1
+  /// assets/images/p1.png
+  static const String imagesP1 = "assets/images/p1.png";
+
+  /// Assets for imagesP2
+  /// assets/images/p2.png
+  static const String imagesP2 = "assets/images/p2.png";
+
+  /// Assets for imagesP3
+  /// assets/images/p3.png
+  static const String imagesP3 = "assets/images/p3.png";
+
   /// Assets for imagesPersonIcon
   /// assets/images/person_icon.png
   static const String imagesPersonIcon = "assets/images/person_icon.png";

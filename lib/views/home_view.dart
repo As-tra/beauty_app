@@ -29,6 +29,7 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kPrimary,
       body: views[currentIndex],
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
@@ -51,7 +52,6 @@ class _HomeViewState extends State<HomeView> {
         },
         activeIndex: currentIndex,
         backgroundColor: kPrimary,
-        
         gapLocation: GapLocation.center,
         notchSmoothness: NotchSmoothness.verySmoothEdge,
         onTap: (index) => setState(() => currentIndex = index),
